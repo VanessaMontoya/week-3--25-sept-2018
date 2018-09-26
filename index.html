@@ -5,19 +5,33 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Block-level Elements</title>
       <style>
+      div {
          margin: 0;
          padding: 0;
          border: 5px solid black;
       }
 
+      div > div > div {
          border-color: red;
+         width: 50%; /* Fluid width of 50% of the parent */
       }
 
+      div > div {
+         border-color: green;
+         width: 50%; /* Fluid width of 50% of the parent */
       }
 
+      div {
+         border-color: blue;
+         width: 800px; /* Fixed width of 800 pixels */
       }
       </style>
    </head>
    <body>
+      <div>
+         <div>
+            <div></div>
+         </div>
+      </div>
    </body>
 </html>
